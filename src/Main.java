@@ -16,9 +16,8 @@ public class Main {
 		
 		Program pg = new Program();
 		
-		
+		System.out.println("Total chances are 5");
 		do {
-			
 			Map<Integer, String> options = new LinkedHashMap<>();
 			options.put(0, "Rock");
 			options.put(1, "Paper");
@@ -41,8 +40,8 @@ public class Main {
 				System.out.println("Selected option is 2: Scissor ");
 			}
 			else if(selected==9) {
-				System.out.println("Terminated :No Analysis");
-				analysis();
+				trial=0;
+				System.out.println("Session Inturrupted by User");
 				break;
 			}
 			Boolean flag = options.containsKey(selected);
@@ -63,11 +62,12 @@ public class Main {
 	
 	}
 	public static void analysis() {
+		System.out.println("Session Analysis : ");
 		System.out.println("Played times is :" + count);
 		System.out.println("Free trial remaining is :" + trial);
 		System.out.println("Won times :"+win.size());
 		System.out.println("Lost times  :"+lost.size());
 		System.out.println("No Contest :"+draw.size());
-		System.out.println("Sport terminated");
+		System.out.println("Terminated");
 	}
 }
