@@ -54,6 +54,7 @@ public class Main {
 			}
 			count++;
 			trial--;
+			System.out.println("Left chances are "+trial);
 			
 		} while (trial != 0);
 		if (trial == 0) {
